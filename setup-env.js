@@ -9,7 +9,10 @@ const env = JSON.parse(fs.readFileSync(envFile, 'utf-8'));
 env.values = env.values.map(variable => {
   if (variable.value && variable.value.startsWith('{{') && variable.value.endsWith('}}')) {
     const envKey = variable.value.slice(2, -2);
-    variable.value = process.env[envKey] || variable.value;
+    const envValue = process.env[envKey] || process.env[envKey.toLowerCase()] || process.env[envKey.toUpperCase()];
+    if (envValue) {
+      variable.value = envValue;
+    }
   }
   return variable;
 });

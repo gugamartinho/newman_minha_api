@@ -16,6 +16,7 @@ reports/
 # Env files
 .env
 .env.*
+!.env.example
 
 # Environment files with sensitive data
 environments/production_env.json

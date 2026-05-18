@@ -33,12 +33,25 @@ Depois, na raiz do projeto:
 npm install
 ```
 
-### 2. Executar testes
+### 2. Configurar ambiente local
+Cria um ficheiro `.env` na raiz do projeto com as variáveis necessárias.
+Podes copiar o exemplo:
+```bash
+cp .env.example .env
+```
+Depois edita `.env` e define:
+```bash
+BASE_URL=https://minha-api-gwjk.onrender.com
+LOGIN_EMAIL=teu-email@example.com
+LOGIN_PASSWORD=sua-senha
+```
+
+### 3. Executar testes
 ```bash
 npm run test
 ```
 
-### 3. Ver relatório HTML
+### 4. Ver relatório HTML
 Após a execução, abre o ficheiro:
 ```bash
 reports/report.html

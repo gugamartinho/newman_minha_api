@@ -4,13 +4,13 @@
   "values": [
     {
       "key": "login_email",
-      "value": "{{LOGIN_EMAIL}}",
+      "value": "joao@example.com",
       "type": "default",
       "enabled": true
     },
     {
       "key": "login_password",
-      "value": "{{LOGIN_PASSWORD}}",
+      "value": "123456",
       "type": "default",
       "enabled": true
     },
@@ -58,7 +58,7 @@
     },
     {
       "key": "base_url",
-      "value": "{{BASE_URL}}",
+      "value": "https://minha-api-gwjk.onrender.com",
       "type": "default",
       "enabled": true
     }

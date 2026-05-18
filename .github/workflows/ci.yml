@@ -25,7 +25,8 @@ jobs:
 
     - name: Criar ficheiro de environment com secrets
       run: |
-        cat <<EOF > production_env.json
+        mkdir -p environments
+        cat <<EOF > environments/production_env.json
         {
             "name": "production_env",
             "values": [
@@ -50,4 +51,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: newman-report
-        path: NEWMAN_MINHA_API/reports/report.html
+        path: reports/report.html
