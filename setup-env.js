@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
-const envFile = path.join(__dirname, 'environments/production_env.json');
-const env = JSON.parse(fs.readFileSync(envFile, 'utf-8'));
+const envTemplateFile = path.join(__dirname, 'environments/production_env.json');
+const envOutputFile = path.join(__dirname, 'environments/production_env.generated.json');
+const env = JSON.parse(fs.readFileSync(envTemplateFile, 'utf-8'));
 
 // Replace placeholder values with environment variables
 env.values = env.values.map(variable => {
@@ -17,5 +18,5 @@ env.values = env.values.map(variable => {
   return variable;
 });
 
-fs.writeFileSync(envFile, JSON.stringify(env, null, 2));
-console.log('Environment variables loaded successfully');
+fs.writeFileSync(envOutputFile, JSON.stringify(env, null, 2));
+console.log(`Environment variables loaded successfully into ${path.basename(envOutputFile)}`);

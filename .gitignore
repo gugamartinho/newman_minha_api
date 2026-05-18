@@ -20,3 +20,4 @@ reports/
 
 # Environment files with sensitive data
 environments/production_env.json
+environments/production_env.generated.json

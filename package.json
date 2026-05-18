@@ -2,7 +2,7 @@
   "name": "newman-tests",
   "version": "1.0.0",
   "scripts": {
-    "test": "node setup-env.js && newman run collections/api_collection.json -e environments/production_env.json -r cli,htmlextra --reporter-htmlextra-export reports/report.html"
+    "test": "node setup-env.js && newman run collections/api_collection.json -e environments/production_env.generated.json -r cli,htmlextra --reporter-htmlextra-export reports/report.html"
   },
   "dependencies": {
     "dotenv": "^16.0.0"
