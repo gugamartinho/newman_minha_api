@@ -30,8 +30,8 @@ jobs:
         {
             "name": "production_env",
             "values": [
-                { "key": "login_email", "value": "${{ secrets.API_EMAIL }}", "type": "default" },
-                { "key": "login_password", "value": "${{ secrets.API_PASSWORD }}", "type": "default" },
+                { "key": "email", "value": "${{ secrets.API_EMAIL }}", "type": "default" },
+                { "key": "password", "value": "${{ secrets.API_PASSWORD }}", "type": "default" },
                 { "key": "base_url", "value": "${{ secrets.API_BASE_URL }}", "type": "default" }
             ]
         }

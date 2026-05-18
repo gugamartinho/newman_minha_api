@@ -3,13 +3,13 @@
   "name": "minha_api_env",
   "values": [
     {
-      "key": "login_email",
+      "key": "email",
       "value": "{{LOGIN_EMAIL}}",
       "type": "default",
       "enabled": true
     },
     {
-      "key": "login_password",
+      "key": "password",
       "value": "{{LOGIN_PASSWORD}}",
       "type": "default",
       "enabled": true
