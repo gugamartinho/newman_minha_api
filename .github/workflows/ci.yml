@@ -23,6 +23,20 @@ jobs:
       run: |
         npm ci
 
+    - name: Criar ficheiro de environment com secrets
+      run: |
+        cd NEWMAN_MINHA_API/environments
+        cat <<EOF > production_env.json
+        {
+            "name": "production_env",
+            "values": [
+                { "key": "login_email", "value": "${{ secrets.API_EMAIL }}", "type": "default" },
+                { "key": "login_password", "value": "${{ secrets.API_PASSWORD }}", "type": "default" },
+                { "key": "base_url", "value": "${{ secrets.API_BASE_URL }}", "type": "default" }
+            ]
+        }
+        EOF
+
     - name: Correr testes Newman
       run: |
         cd NEWMAN_MINHA_API

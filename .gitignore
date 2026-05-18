@@ -16,3 +16,6 @@ reports/
 # Env files
 .env
 .env.*
+
+# Environment files with sensitive data
+environments/production_env.json
