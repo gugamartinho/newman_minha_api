@@ -1,0 +1,57 @@
+{
+	"id": "14cd7dca-337c-48c6-ad1d-3849238e6b49",
+	"name": "minha_api_env",
+	"values": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "user_id",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "user_name",
+			"value": "Utilizador Teste",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "order_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "user_email",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "random_user_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "random_order_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "https://minha-api-gwjk.onrender.com",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-05-18T16:19:31.444Z",
+	"_postman_exported_using": "Postman/11.72.3"
+}

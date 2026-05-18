@@ -1,0 +1,11 @@
+{
+  "name": "newman-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "newman run collections/api_collection.json -e environments/production_env.json -r cli,htmlextra --reporter-htmlextra-export reports/report.html"
+  },
+  "devDependencies": {
+    "newman": "^6.0.0",
+    "newman-reporter-htmlextra": "^1.23.0"
+  }
+}
