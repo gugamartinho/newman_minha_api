@@ -25,7 +25,6 @@ jobs:
 
     - name: Criar ficheiro de environment com secrets
       run: |
-        cd NEWMAN_MINHA_API/environments
         cat <<EOF > production_env.json
         {
             "name": "production_env",
@@ -37,9 +36,12 @@ jobs:
         }
         EOF
 
+    - name: Carregar variáveis de ambiente
+      run: |
+        node setup-env.js
+
     - name: Correr testes Newman
       run: |
-        cd NEWMAN_MINHA_API
         npm run test
       continue-on-error: true
 
