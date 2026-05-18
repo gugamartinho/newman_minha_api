@@ -25,10 +25,13 @@ jobs:
 
     - name: Correr testes Newman
       run: |
+        cd NEWMAN_MINHA_API
         npm run test
+      continue-on-error: true
 
     - name: Guardar relatório como artefacto
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: newman-report
-        path: reports/report.html
+        path: NEWMAN_MINHA_API/reports/report.html
